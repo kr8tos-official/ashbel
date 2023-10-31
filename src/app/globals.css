@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+    --nav_bg: linear-gradient(
+      94deg,
+      #353535 -24.28%,
+      rgba(56, 55, 55, 0.97) 109.91%
+    );
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom, #212121, #1e1e1e)
+    rgb(var(--background-start-rgb));
+  scroll-behavior: smooth;
+}
+
+.header_bg {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(49, 49, 49, 0.9),
+      rgba(6, 6, 6, 0.8)
+    ),
+    url("/sample_images/LightPainting.jpg");
+  object-fit: cover;
+  background-position: center;
+  background-size: cover;
+
+  width: 100%;
+}
+
+.absolute_centering {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#style-2::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #6c6c6c;
+  margin-bottom: 50px;
+}
+
+#style-2::-webkit-scrollbar {
+  width: 6px;
+  margin-bottom: 50px;
+}
+
+#style-2::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #242424;
+  margin-bottom: 50px;
+}
+
+.scrollbar {
+  width: auto;
+  margin-bottom: 50px;
+}
+
+.top_transform_origin {
+  transform-origin: top;
+  opacity: 50%;
+}
